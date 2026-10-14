@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <div class="card-header">
+        <h3 class="card-title">
+            <i class="ti ti-screen-share me-1"></i>
+            {{ __("Remote connection", "meshlinking") }}
+        </h3>
+    </div>
+    <div class="card-body">
+        {% for link in links %}
+            <a href="{{ link.url|e('html_attr') }}"
+               class="btn btn-sm btn-outline-primary mb-1 me-1"
+               {% if open_new_tab|default(true) %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                <i class="ti ti-plug-connected me-1"></i>
+                {{ __("Connect to %s", "meshlinking")|format(link.computer) }}
+                {% if links|length > 1 %}<span class="text-muted">({{ link.type }})</span>{% endif %}
+            </a>
+        {% endfor %}
+    </div>
+</div>

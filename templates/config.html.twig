@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-12 col-lg-7">
+            <form method="post" action="{{ path('@meshlinking:meshlinking_config') }}" class="card">
+                <div class="card-header">
+                    <h3 class="card-title">{{ __("Settings", "meshlinking") }}</h3>
+                </div>
+                <div class="card-body">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="url_template">{{ __("URL template", "meshlinking") }}</label>
+                        <input type="text" id="url_template" name="url_template" class="form-control"
+                               value="{{ config.url_template|e('html_attr') }}"
+                               placeholder="https://meshcentral.example.com/?viewmode=11&gotonode={id}">
+                        <div class="form-text">
+                            {{ __("The {id} placeholder is replaced by the remote ID as-is (no URL encoding).", "meshlinking") }}
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{ __("Connection types", "meshlinking") }}</label>
+                        {% for key, label in known_types %}
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="type_{{ key }}"
+                                       name="types[]" value="{{ key }}"
+                                       {{ key in config.types ? "checked" : "" }}>
+                                <label class="form-check-label" for="type_{{ key }}">{{ label }} <code>{{ key }}</code></label>
+                            </div>
+                        {% endfor %}
+                        <div class="form-text">
+                            {{ __("Only remote IDs of the selected types are turned into links.", "meshlinking") }}
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="open_new_tab" name="open_new_tab"
+                                   value="1" {{ config.open_new_tab ? "checked" : "" }}>
+                            <label class="form-check-label" for="open_new_tab">
+                                {{ __("Open links in a new tab", "meshlinking") }}
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer text-end">
+                    <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit" name="update" class="btn btn-primary">{{ __("Save") }}</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12 col-lg-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">{{ __("How it works", "meshlinking") }}</h3>
+                </div>
+                <div class="card-body">
+                    <ol class="mb-0">
+                        <li>{{ __("Remote IDs are collected from the inventory into the computer's Remote management tab.", "meshlinking") }}</li>
+                        <li>{{ __("Their value is turned into a link using the URL template above.", "meshlinking") }}</li>
+                        <li>{{ __("A Connect button appears in the ticket info panel for the requester's computer.", "meshlinking") }}</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h3 class="card-title">{{ __("MeshCentral URL tips", "meshlinking") }}</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="mb-0">
+                        <li><code>viewmode=10</code> &mdash; {{ __("device page", "meshlinking") }}</li>
+                        <li><code>viewmode=11</code> &mdash; {{ __("remote desktop (auto connect)", "meshlinking") }}</li>
+                        <li><code>viewmode=12</code> &mdash; {{ __("terminal", "meshlinking") }}</li>
+                        <li><code>viewmode=13</code> &mdash; {{ __("files", "meshlinking") }}</li>
+                        <li><code>hide=16</code> &mdash; {{ __("hide the device list", "meshlinking") }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

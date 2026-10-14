@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MeshCentral link (glpi-meshlinking)\n"
+"Report-Msgid-Bugs-To: https://github.com/pbolkhovitin/glpi-meshlinking/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "MeshCentral link"
+msgstr ""
+
+msgid "Connect to a computer"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "URL template"
+msgstr ""
+
+msgid "The {id} placeholder is replaced by the remote ID as-is (no URL encoding)."
+msgstr ""
+
+msgid "Connection types"
+msgstr ""
+
+msgid "Only remote IDs of the selected types are turned into links."
+msgstr ""
+
+msgid "Open links in a new tab"
+msgstr ""
+
+msgid "How it works"
+msgstr ""
+
+msgid "Remote IDs are collected from the inventory into the computer's Remote management tab."
+msgstr ""
+
+msgid "Their value is turned into a link using the URL template above."
+msgstr ""
+
+msgid "A Connect button appears in the ticket info panel for the requester's computer."
+msgstr ""
+
+msgid "MeshCentral URL tips"
+msgstr ""
+
+msgid "device page"
+msgstr ""
+
+msgid "remote desktop (auto connect)"
+msgstr ""
+
+msgid "terminal"
+msgstr ""
+
+msgid "files"
+msgstr ""
+
+msgid "hide the device list"
+msgstr ""
+
+msgid "Remote connection"
+msgstr ""
+
+msgid "Connect to %s"
+msgstr ""

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <name>MeshCentral link</name>
+    <key>meshlinking</key>
+    <description>
+        <en>Turns MeshCentral remote IDs into clickable links and adds a Connect button to tickets.</en>
+        <ru>Превращает remote ID MeshCentral в кликабельные ссылки и добавляет кнопку подключения в заявках.</ru>
+    </description>
+    <homepage>https://github.com/pbolkhovitin/glpi-meshlinking</homepage>
+    <authors>
+        <author>pbolkhovitin</author>
+    </authors>
+    <versions>
+        <version>
+            <num>1.0.0</num>
+            <compatibility>11.0</compatibility>
+        </version>
+    </versions>
+    <license>GPLv3+</license>
+</root>

@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MeshCentral link (glpi-meshlinking)\n"
+"Report-Msgid-Bugs-To: https://github.com/pbolkhovitin/glpi-meshlinking/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "MeshCentral link"
+msgstr "Ссылка MeshCentral"
+
+msgid "Connect to a computer"
+msgstr "Подключение к компьютеру"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "URL template"
+msgstr "Шаблон URL"
+
+msgid "The {id} placeholder is replaced by the remote ID as-is (no URL encoding)."
+msgstr "Плейсхолдер {id} заменяется на remote ID как есть (без URL-кодирования)."
+
+msgid "Connection types"
+msgstr "Типы подключения"
+
+msgid "Only remote IDs of the selected types are turned into links."
+msgstr "В ссылки превращаются только remote ID выбранных типов."
+
+msgid "Open links in a new tab"
+msgstr "Открывать ссылки в новой вкладке"
+
+msgid "How it works"
+msgstr "Как это работает"
+
+msgid "Remote IDs are collected from the inventory into the computer's Remote management tab."
+msgstr "Remote ID собираются инвентаризацией на вкладке «Удалённое управление» компьютера."
+
+msgid "Their value is turned into a link using the URL template above."
+msgstr "Их значение превращается в ссылку по шаблону URL выше."
+
+msgid "A Connect button appears in the ticket info panel for the requester's computer."
+msgstr "В панели заявки появляется кнопка подключения к компьютеру заявителя."
+
+msgid "MeshCentral URL tips"
+msgstr "Подсказки по URL MeshCentral"
+
+msgid "device page"
+msgstr "страница устройства"
+
+msgid "remote desktop (auto connect)"
+msgstr "удалённый рабочий стол (автоподключение)"
+
+msgid "terminal"
+msgstr "терминал"
+
+msgid "files"
+msgstr "файлы"
+
+msgid "hide the device list"
+msgstr "скрыть список устройств"
+
+msgid "Remote connection"
+msgstr "Удалённое подключение"
+
+msgid "Connect to %s"
+msgstr "Подключиться к %s"
